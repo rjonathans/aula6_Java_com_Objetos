@@ -19,6 +19,8 @@ public class Animal {  /*nome da classe*/
     private int idadePrivado;
     private String corPrivado;
 
+    private Pessoa donoAnimal;
+
 //Construtor Padrão
 
     public Animal() {
@@ -59,6 +61,10 @@ public class Animal {  /*nome da classe*/
         return corPrivado;
     }
 
+    public Pessoa getDonoAnimal(){
+        return donoAnimal;
+    }
+
 
 //SETT
 
@@ -76,6 +82,10 @@ public class Animal {  /*nome da classe*/
 
     public void setCorPrivado(String novaCorPrivado){
         corPrivado=novaCorPrivado;
+    }
+
+    public void setDonoAnimal(Pessoa novoDonoAnimal){
+        donoAnimal=novoDonoAnimal;
     }
 
 }

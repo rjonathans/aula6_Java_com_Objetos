@@ -17,12 +17,12 @@ public class Principal {
         System.out.println(animalDomestico.nomeAnimal);//construtor padrão
 
         // Animal animalMamifero;
-        animalMamifero = new Animal("Bidu");//construtor específico
+        animalMamifero = new Animal("Lulu");//construtor específico
 
-        Animal animalDomestico;
-        animalDomestico = new Animal(); //Construtor padrão
 
-        animalMamifero.setNomeAnimalPrivado("Lulu");  // imprimirá Lulu
+        animalDomestico = new Animal("Lulu"); //Construtor padrão -
+
+        animalMamifero.setNomeAnimalPrivado("Lulu");  // Forma correta de alterar o nome de um objeto criado
 
         System.out.println(animalMamifero.getNomeAnimalPrivado());
         System.out.println(animalMamifero.getRacaPrivado());
@@ -32,6 +32,18 @@ public class Principal {
         animalDomestico.setNomeAnimalPrivado("Ted");
 
         System.out.println(animalDomestico.getNomeAnimalPrivado());//construtor padrão
+
+        System.out.println("****************************************************************************");
+
+        Pessoa pessoaJovem = new Pessoa("Catarine");
+
+        System.out.println(pessoaJovem.getNomePessoa());
+        animalDomestico.setDonoAnimal(pessoaJovem);
+        System.out.println(animalDomestico.getDonoAnimal().getNomePessoa());
+
+
+        Pessoa pessoaIdosa = new Pessoa("Clotilde");
+        animalDomestico.setDonoAnimal(pessoaIdosa);
 
     }
 }
